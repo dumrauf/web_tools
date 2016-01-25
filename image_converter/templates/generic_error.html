@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block main_content_block %}
+    <h1>
+        An Error Occurred
+    </h1>
+
+    <p>
+        An error has occurred while processing your file '{{ file }}'.
+        Please try again later.
+    </p>
+{% endblock %}

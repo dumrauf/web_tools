@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block main_content_block %}
+    <h1>Convert Image to JPEG</h1>
+
+    <p>
+        Please select an
+        <a href="https://en.wikipedia.org/wiki/Image_file_formats">image</a>
+        file to upload and convert to <a href="https://en.wikipedia.org/wiki/JPEG">JPEG</a> file.
+    </p>
+
+    <form action="{% url 'upload_and_convert_image_file' %}" method="post"
+          enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>{{ form.non_field_errors }}</p>
+        <p>{{ form.file.label_tag }} {{ form.file.help_text }}</p>
+        <p>
+            {{ form.file.errors }}
+            {{ form.file }}
+        </p>
+        <p><input type="submit" value="Upload and Convert" /></p>
+
+        <p>
+            Note:
+            Processing your file may take some time.
+            Please do not click the button again after submitting this form.
+        </p>
+    </form>
+{% endblock %}

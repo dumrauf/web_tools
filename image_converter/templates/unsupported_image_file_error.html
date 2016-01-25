@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block main_content_block %}
+    <h1>
+        File Format Error
+    </h1>
+
+    <p>
+        The uploaded file '{{ file }}' could not be detected as an
+        <a href="https://en.wikipedia.org/wiki/Image_file_formats">Image</a>
+        file.
+    </p>
+{% endblock %}
