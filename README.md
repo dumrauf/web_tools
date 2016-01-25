@@ -64,5 +64,5 @@ There is also a rudimentary [Gunicorn](http://gunicorn.org/) configuration provi
 you want to eventually run it behind an [Nginx](https://www.nginx.com/). For that, use the command
 
 ```
-./start_gunicorn
+./start_gunicorn.sh
 ```
